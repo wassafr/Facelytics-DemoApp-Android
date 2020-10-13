@@ -32,9 +32,6 @@ class FaceView : View {
         invalidate()
     }
 
-    /**
-     * In the example view, this drawable is drawn above the text.
-     */
     constructor(context: Context) : super(context) {}
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {}
@@ -66,7 +63,7 @@ class FaceView : View {
                 }
                 if (predictionMap[it.trackingId]?.gender != null)
                     canvas?.drawText(
-                        if (predictionMap[it.trackingId]?.gender == GenderPredictionResult.Gender.FEMALE) "Femme" else "Homme",
+                        if (predictionMap[it.trackingId]?.gender == GenderPredictionResult.Gender.FEMALE) "Women" else "Man",
                         it.rect!!.exactCenterX() / 680 * 1300 - 70,
                         it.rect!!.exactCenterY() / 680 * 1300 + 100,
                         paint
