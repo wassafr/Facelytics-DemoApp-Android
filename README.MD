@@ -13,7 +13,7 @@ allprojects {
 }
 
 dependencies {
-    implementation("io.wassa.libraries:facelytics-sdk:1.0.0")
+    implementation("io.wassa.libraries:facelytics-sdk:1.0.1")
 }
 ```
 
