@@ -47,23 +47,23 @@ class FaceView : View {
                     100f,
                     paint
                 )
-                if (predictionMap[it.trackingId]?.age != null) {
+                if (predictionMap[it.trackingId]?.result?.agePrediction != null) {
                     canvas?.drawText(
-                        predictionMap[it.trackingId]?.age?.average.toString(),
+                        predictionMap[it.trackingId]?.result?.agePrediction?.age.toString(),
                         it.rect!!.exactCenterX() / 680 * 1300 - 20,
                         it.rect!!.exactCenterY() / 680 * 1300 - 20,
                         paint
                     )
-                    predictionMap[it.trackingId]?.age?.rawResultArray?.forEachIndexed { index, fl ->
+                    predictionMap[it.trackingId]?.result?.agePrediction?.ageScores?.forEachIndexed { index, fl ->
                         canvas?.drawRect((it.rect!!.exactCenterX() / 680 * 1300) - 50 + index,
                             ((it.rect!!.exactCenterY() / 680 * 1300) + 50) - (50 * (fl)),
                             (it.rect!!.exactCenterX() / 680 * 1300) - 50 + index + 4,
                             ((it.rect!!.exactCenterY() / 680 * 1300) + 50), paint)
                     }
                 }
-                if (predictionMap[it.trackingId]?.gender != null)
+                if (predictionMap[it.trackingId]?.result?.genderPrediction != null)
                     canvas?.drawText(
-                        if (predictionMap[it.trackingId]?.gender == GenderPredictionResult.Gender.FEMALE) "Women" else "Man",
+                        if (predictionMap[it.trackingId]?.result?.genderPrediction?.gender == GenderPredictionResult.Gender.FEMALE) "Women" else "Man",
                         it.rect!!.exactCenterX() / 680 * 1300 - 70,
                         it.rect!!.exactCenterY() / 680 * 1300 + 100,
                         paint

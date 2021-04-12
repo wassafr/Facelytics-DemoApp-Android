@@ -140,12 +140,7 @@ class MainActivity : AppCompatActivity(), ImageAnalysis.Analyzer {
             computesPredictions = true
             Observable.fromIterable(faces)
                 .flatMap { face ->
-                    facelytics.predictAge(face).map { PredictionResult(face, it, null) }
-                        .toObservable()
-                }
-                .flatMap { predictionResult ->
-                    facelytics.predictGender(predictionResult.face)
-                        .map { predictionResult.gender = it.gender; predictionResult }
+                    facelytics.predictAttributes(face).map { PredictionResult(face, it) }
                         .toObservable()
                 }
                 .subscribeOn(Schedulers.computation())
