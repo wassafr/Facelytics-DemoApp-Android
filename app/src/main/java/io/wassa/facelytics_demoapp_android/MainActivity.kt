@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), ImageAnalysis.Analyzer {
         setContentView(R.layout.activity_main)
         facelytics = Facelytics(
             this,
-            "YOUR LICENSE KEY"
+            "eyJlbmQiOiIyMDIxLTA1LTE1VDIwOjAwOjQ2WiIsIm5iX2NhbGxzIjoxMDAwLCJzdGFydCI6IjIwMjEtMDEtMDdUMTA6MDA6MDBaIiwidHlwZSI6IlNESyIsDQoic2lnbiI6IkZOSUp5eW1JVUt3aGJSWTcvanBNS2xaWE85TlUvdTBNdHpmSjBIeU5sUHd4eU9YODhvUzBCODFlSjVHcFNZNjJXRjZ5QTFCTEI5WHJBc2FnNUk3STErT241R2hGMnN2cDlDS0VUWjk4QWRNamVPU2ZHK3BZcVdNOGFhbFNVaThtR204OVdZSHllZ1NtS2svZlMwVkxtd3FYNVk2cElCckNESHNDc004eUdwdm5QczlVQUJGd25GMzlxaEpJZGU3cHVEN0tMMmNkeThKRnhldEdETlhCSjYxSWVsTGRVTWJiUHFzTXdydndWenJWSmFaZndFaFpWb2c0eGREZ1AxRHhSQVkvL2NONWNkVjNIdG5BVkcyMVlzWXRWejdzOWY1RzBxSlRQUGlVZWJRQkdrSTc2Q2hHK3dmdUZ5MER0bWZ0Q1N4V1poOTNCclJPRERWdUowZENIQT09Ig0KfQ=="
         )
         facelytics.loadModel().subscribeOn(Schedulers.computation())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({

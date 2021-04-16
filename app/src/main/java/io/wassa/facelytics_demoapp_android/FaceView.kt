@@ -56,7 +56,7 @@ class FaceView : View {
                     )
                     predictionMap[it.trackingId]?.result?.agePrediction?.ageScores?.forEachIndexed { index, fl ->
                         canvas?.drawRect((it.rect!!.exactCenterX() / 680 * 1300) - 50 + index,
-                            ((it.rect!!.exactCenterY() / 680 * 1300) + 50) - (50 * (fl)),
+                            ((it.rect!!.exactCenterY() / 680 * 1300) + 50) - (50 * (fl * 2)),
                             (it.rect!!.exactCenterX() / 680 * 1300) - 50 + index + 4,
                             ((it.rect!!.exactCenterY() / 680 * 1300) + 50), paint)
                     }
