@@ -27,7 +27,7 @@ The main sdk entry points is the Facelytics object. You have to keep reference o
 
 ## Documentation
 
-You can find a more detailled documentation of the SDK at the following [address](https://facelytics.io/library/android/).
+You can find a more detailled documentation of the SDK at the following [address](https://services.wassa.io/sdk/library/android/).
 If you need to contact us, send an email at support@wassa.io
 
 ## Requirements
