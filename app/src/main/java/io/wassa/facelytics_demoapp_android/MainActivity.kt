@@ -2,12 +2,12 @@ package io.wassa.facelytics_demoapp_android
 
 import android.Manifest
 import android.graphics.Matrix
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Size
 import android.view.Surface
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import com.tbruyelle.rxpermissions2.RxPermissions
 import io.reactivex.Observable
@@ -19,6 +19,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.TimeUnit
+import java.util.logging.Level
+import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity(), ImageAnalysis.Analyzer {
 
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity(), ImageAnalysis.Analyzer {
         setContentView(R.layout.activity_main)
         facelytics = Facelytics(
             this,
-            "eyJlbmQiOiIyMDIxLTA1LTE1VDIwOjAwOjQ2WiIsIm5iX2NhbGxzIjoxMDAwLCJzdGFydCI6IjIwMjEtMDEtMDdUMTA6MDA6MDBaIiwidHlwZSI6IlNESyIsDQoic2lnbiI6IkZOSUp5eW1JVUt3aGJSWTcvanBNS2xaWE85TlUvdTBNdHpmSjBIeU5sUHd4eU9YODhvUzBCODFlSjVHcFNZNjJXRjZ5QTFCTEI5WHJBc2FnNUk3STErT241R2hGMnN2cDlDS0VUWjk4QWRNamVPU2ZHK3BZcVdNOGFhbFNVaThtR204OVdZSHllZ1NtS2svZlMwVkxtd3FYNVk2cElCckNESHNDc004eUdwdm5QczlVQUJGd25GMzlxaEpJZGU3cHVEN0tMMmNkeThKRnhldEdETlhCSjYxSWVsTGRVTWJiUHFzTXdydndWenJWSmFaZndFaFpWb2c0eGREZ1AxRHhSQVkvL2NONWNkVjNIdG5BVkcyMVlzWXRWejdzOWY1RzBxSlRQUGlVZWJRQkdrSTc2Q2hHK3dmdUZ5MER0bWZ0Q1N4V1poOTNCclJPRERWdUowZENIQT09Ig0KfQ=="
+            "Your License key"
         )
         facelytics.loadModel().subscribeOn(Schedulers.computation())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
