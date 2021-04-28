@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "io.wassa.facelytics_demoapp_android"
+        applicationId "io.wassa.facelyticsdemoappandroid"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

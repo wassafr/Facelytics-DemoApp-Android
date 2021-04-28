@@ -1,4 +1,4 @@
-package io.wassa.facelytics_demoapp_android
+package io.wassa.facelyticsdemoappandroid
 
 import android.content.Context
 import android.graphics.Canvas

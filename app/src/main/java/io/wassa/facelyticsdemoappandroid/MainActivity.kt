@@ -1,4 +1,4 @@
-package io.wassa.facelytics_demoapp_android
+package io.wassa.facelyticsdemoappandroid
 
 import android.Manifest
 import android.graphics.Matrix
@@ -19,8 +19,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.TimeUnit
-import java.util.logging.Level
-import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity(), ImageAnalysis.Analyzer {
 

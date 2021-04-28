@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <io.wassa.facelytics_demoapp_android.FaceView
+    <io.wassa.facelyticsdemoappandroid.FaceView
         android:id="@+id/faceView"
         android:layout_width="400dp"
         android:layout_height="533dp"

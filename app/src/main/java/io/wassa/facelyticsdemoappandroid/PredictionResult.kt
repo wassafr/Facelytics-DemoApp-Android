@@ -1,4 +1,4 @@
-package io.wassa.facelytics_demoapp_android
+package io.wassa.facelyticsdemoappandroid
 
 import io.wassa.facelyticssdk.model.Face
 import io.wassa.facelyticssdk.model.PredictionResult
